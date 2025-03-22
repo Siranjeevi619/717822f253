@@ -36,10 +36,6 @@ app.use("/test/user", async (req, res) => {
   try {
     const token = req.headers.authorization;
 
-    if (!token) {
-      return res.status(401).json({ message: "token miissed" });
-    }
-
     const response = await axios.get("http://20.244.56.144/test/users", {
       headers: {
         Authorization: token,

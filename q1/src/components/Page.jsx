@@ -15,6 +15,7 @@ function Page() {
           },
         });
         setUser(response.data.users);
+        console.log("data");
       } catch (error) {
         console.log(error);
       }
